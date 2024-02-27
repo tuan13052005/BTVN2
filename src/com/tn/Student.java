@@ -1,7 +1,5 @@
 package com.tn;
 
-import java.sql.Array;
-
 public class Student {
     public void Bai1(int[] Array, int n) {
         System.out.print("Mang " + n + " so nguyen la:");
@@ -27,15 +25,19 @@ public class Student {
         int[] T = new int[n];
         int t = 0;
         for (int i = 0; i < n; i++) {
-            int temp = 0;
-            for (int j = 2; j < Array[i]; j++) {
-                if (Array[i] % j == 0) {
-                    temp++;
-                }
+            if (Array[i] == 1 ) {
             }
-            if (temp == 0) {
-                T[t] = Array[i];
-                t++;
+            else{
+                int temp = 0;
+                for (int j = 2; j < Array[i]; j++) {
+                    if (Array[i] % j == 0) {
+                        temp++;
+                    }
+                }
+                if (temp == 0) {
+                    T[t] = Array[i];
+                    t++;
+                }
             }
         }
         System.out.print("Cac so nguyen to la:");
